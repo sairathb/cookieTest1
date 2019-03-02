@@ -5,6 +5,7 @@ function onLoad() {
     document.getElementById('name').value = name;
     setNameMessage(false);
 }
+
 function setNameMessage(shouldSetCookie) {
     var name = document.getElementById('name').value;
     document.getElementById('nameLabel').innerHTML = name;
