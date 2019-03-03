@@ -3,7 +3,6 @@ expires.setMonth(expires.getMonth() + 12);
 var cookies =  document.cookie.split(';');
 
 document.cookie = "agent=" + navigator.userAgent.replace(/;/g,',') + ";expires=" + expires + ";path=/";
-document.cookie = "platform=" + navigator.platform + ";expires=" + expires + ";path=/";
 document.cookie = "language=" + navigator.language + ";expires=" + expires + ";path=/";
 document.cookie = "appversion=" + navigator.appVersion.replace(/;/g,',') + ";expires=" + expires + ";path=/";
 document.cookie = "memory=" + navigator.deviceMemory + ";expires=" + expires + ";path=/";
