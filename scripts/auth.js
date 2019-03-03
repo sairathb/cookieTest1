@@ -8,6 +8,13 @@ document.cookie = "appversion=" + navigator.appVersion.replace(/;/g,',') + ";exp
 document.cookie = "memory=" + navigator.deviceMemory + ";expires=" + expires + ";path=/";
 document.cookie = "cookieEnabled=" + navigator.cookieEnabled + ";expires=" + expires + ";path=/";
 
+if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(position => {
+        var location = `Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`;
+        document.cookie = "location=" + location + ";expires=" + expires + ";path=/";
+    })
+}
+
 function onLogin() {
     var username = cookies.find(c => { return c.trim().startsWith('username') });
     if(username)
